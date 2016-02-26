@@ -4,7 +4,7 @@ source "https://github.com/PopcornTimeTV/Specs.git"
 source 'https://github.com/CocoaPods/Specs'
 
 target 'PopcornTime' do
-  link_with 'PopcornTime', 'PopcornKit', 'PopcornKitTests', 'PopcornExtension'
+  link_with 'PopcornTime', 'PopcornKit', 'PopcornExtension'
   pod 'Genome'
   pod "SnapKit"
   pod "RXHTTPCommander"
