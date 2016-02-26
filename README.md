@@ -15,9 +15,8 @@ Join the project Slack channel and be part of the PopcornTime experience for App
 ### Setup
 
 1. Git clone the repository `https://github.com/pepibumur/PopcornTimeTV.git`
-2. Install gem dependencies `bundle install`
-3. Install the pod dependencies `bundle exec pod install`
-4. Open the project using `PopcornTime.xcworkspace`
+2. Run `bash script/bootstrap`
+3. Open the project using `PopcornTime.xcworkspace`
 
 
 ### Do you want to contribute?

@@ -111,6 +111,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1B447A2451F538AC3B4FC0F2 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2318A67E1C3AFCAD003ACD13 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = Libraries/libtorrentBuild/UniversalTVOS/libboost_filesystem.a; sourceTree = "<group>"; };
 		2318A67F1C3AFCAD003ACD13 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = Libraries/libtorrentBuild/UniversalTVOS/libboost_system.a; sourceTree = "<group>"; };
 		2318A6801C3AFCAD003ACD13 /* libtorrent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtorrent.a; path = Libraries/libtorrentBuild/UniversalTVOS/libtorrent.a; sourceTree = "<group>"; };
@@ -194,6 +195,7 @@
 		5D093D5B7E233237F00874C3 /* Pods_PopcornTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PopcornTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAB6A1725257ABB13F25D8D /* Pods-PopcornTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTime/Pods-PopcornTime.debug.xcconfig"; sourceTree = "<group>"; };
 		9FE53E9F59196A024CD9B86C /* Pods-PopcornTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PopcornTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-PopcornTime/Pods-PopcornTime.release.xcconfig"; sourceTree = "<group>"; };
+		E0754B59B09510FFDB5C56BA /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC57A37852FB3CDC4745FE89 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -702,6 +704,8 @@
 			children = (
 				9BAB6A1725257ABB13F25D8D /* Pods-PopcornTime.debug.xcconfig */,
 				9FE53E9F59196A024CD9B86C /* Pods-PopcornTime.release.xcconfig */,
+				E0754B59B09510FFDB5C56BA /* Pods-Tests.debug.xcconfig */,
+				1B447A2451F538AC3B4FC0F2 /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1333,7 +1337,7 @@
 		};
 		23FC87191C2D4D550031D9FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BAB6A1725257ABB13F25D8D /* Pods-PopcornTime.debug.xcconfig */;
+			baseConfigurationReference = E0754B59B09510FFDB5C56BA /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
@@ -1347,7 +1351,7 @@
 		};
 		23FC871A1C2D4D550031D9FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FE53E9F59196A024CD9B86C /* Pods-PopcornTime.release.xcconfig */;
+			baseConfigurationReference = 1B447A2451F538AC3B4FC0F2 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
