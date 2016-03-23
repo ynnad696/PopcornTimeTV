@@ -30,11 +30,7 @@ PopcornTime.xcworkspace
 
 ##Want to help?
 
-Want to report a bug, request a feature to or even contribute?
-We need all the help we can get! You can join our community 
-Slack group to keep up-to-date and speak to the team.
-
 Join the project Slack channel and be part of the PopcornTime experience for AppleTV. Designer? Developer? Curious person? You're welcome! Come in and say hello. Want to report a bug, request a feature or even contribute? You can join our community Slack group to keep up-to-date and speak to the team.
 
-+[![Slack Status](https://popcorntimeappletv.herokuapp.com/badge.svg)](https://popcorntimeappletv.herokuapp.com/)
+[![Slack Status](https://popcorntimeappletv.herokuapp.com/badge.svg)](https://popcorntimeappletv.herokuapp.com/)
 
