@@ -2,7 +2,6 @@
 //  String+Cleaned.swift
 //  PopcornTime
 //
-//  Created by Stephen Radford on 23/03/2016.
 //  Copyright © 2016 PopcornTime. All rights reserved.
 //
 
