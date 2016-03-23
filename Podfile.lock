@@ -16,7 +16,7 @@ DEPENDENCIES:
   - Kingfisher
   - PopcornKit (from `git@github.com:PopcornTimeTV/PopcornKit.git`, branch `master`)
   - PopcornTorrent (from `https://github.com/PopcornTimeTV/PopcornTorrent.git`)
-  - TVMLKitchen (from `https://github.com/toshi0383/TVMLKitchen.git`)
+  - TVMLKitchen (from `git@github.com:toshi0383/TVMLKitchen.git`, branch `swift2.2`)
   - YoutubeSourceParserKit
 
 EXTERNAL SOURCES:
@@ -26,25 +26,26 @@ EXTERNAL SOURCES:
   PopcornTorrent:
     :git: https://github.com/PopcornTimeTV/PopcornTorrent.git
   TVMLKitchen:
-    :git: https://github.com/toshi0383/TVMLKitchen.git
+    :branch: swift2.2
+    :git: git@github.com:toshi0383/TVMLKitchen.git
 
 CHECKOUT OPTIONS:
   PopcornKit:
-    :commit: c579cd71466a0deb56e616b5bd19f48b9f9ec792
+    :commit: cfd4564a472a4029bd48e282e78240d568a0daba
     :git: git@github.com:PopcornTimeTV/PopcornKit.git
   PopcornTorrent:
-    :commit: 25cd069f3376213aac2b6930092cf0fe535c330a
+    :commit: 993b998fa437ac943387524ffc3cb6a78c69250a
     :git: https://github.com/PopcornTimeTV/PopcornTorrent.git
   TVMLKitchen:
     :commit: 65a3589e7bf055d320642b400229126565c05664
-    :git: https://github.com/toshi0383/TVMLKitchen.git
+    :git: git@github.com:toshi0383/TVMLKitchen.git
 
 SPEC CHECKSUMS:
   Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   Kingfisher: 3ac09acad75a25ab22f6d7cef3de10d61dd4792d
   ObjectMapper: 528b1a6677a6acac7747edd508576983e76a9148
-  PopcornKit: 1c14e755e6bbea68785ddd1ca89ae9e337568469
-  PopcornTorrent: 49835ea6cf9a90b98da6d022c8b190c40bf59389
+  PopcornKit: 07037e80c8ab915f50882f98e9d7f586bf6138e7
+  PopcornTorrent: 8ba0552c1593f9d39f37f49b22782c5c2ab91ac1
   SWXMLHash: cf2a62b04514211b238b39b3aa348ba4746523af
   TVMLKitchen: e1916ec9bca767dae34e509ab59fdf8009d52d8a
   YoutubeSourceParserKit: d1506222a62718ed41f18ab52ebbc1b1d9ecabcc
