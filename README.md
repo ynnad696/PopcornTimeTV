@@ -26,7 +26,7 @@ PopcornTime.xcworkspace
 
 ##Version
 
-- 1.0 - Initial Commit *(rewrite)*
+- 0.1 - Initial Commit *(rewrite)*
 
 ##Want to help?
 
