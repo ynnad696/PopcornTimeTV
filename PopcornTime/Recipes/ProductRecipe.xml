@@ -1,0 +1,64 @@
+<productTemplate>
+    <banner>
+        <infoList>
+            <info>
+                <header>
+                    <title>Actors</title>
+                </header>
+                {{ACTORS}}
+            </info>
+        </infoList>
+        
+        <stack>
+            <title>{{TITLE}}</title>
+            <row>
+<!--                <text><badge src="resource://tomato-fresh"/> 64%</text>-->
+                <text>{{RUNTIME}}</text>
+                <text>{{GENRES}}</text>
+                <text>{{YEAR}}</text>
+                <badge src="resource://mpaa-{{RATING}}" class="badge" />
+                <badge src="resource://cc" class="badge" />
+            </row>
+            <description allowsZooming="true" moreLabel="more" actionID="showDescription:{{TITLE}}:{{DESCRIPTION}}">{{DESCRIPTION}}</description>
+            <row>
+                <buttonLockup actionID="playMovie:{{MAGNET}}:{{IMAGE}}:{{TITLE}}">
+                    <badge src="resource://button-play" />
+                    <title>Play</title>
+                </buttonLockup>
+                
+                <buttonLockup actionID="playPreview:{{YOUTUBE_PREVIEW_URL}}">
+                    <badge src="resource://button-preview" />
+                    <title>Trailer</title>
+                </buttonLockup>
+                
+                <buttonLockup actionID="addWatchlist:{{MOVIE_ID}}">
+                    <badge src="resource://button-add" />
+                    <title>Watchlist</title>
+                </buttonLockup>
+            </row>
+        </stack>
+        
+        <heroImg src="{{IMAGE}}" />
+    </banner>
+    
+    <!-- Suggestions -->
+    <shelf>
+        <header>
+            <title>More Like This</title>
+        </header>
+        <section>
+            {{SUGGESTIONS}}
+        </section>
+    </shelf>
+    
+    <!-- Cast -->
+    <shelf>
+        <header>
+            <title>Cast and Crew</title>
+        </header>
+        <section>
+            {{CAST}}
+        </section>
+    </shelf>
+
+</productTemplate>

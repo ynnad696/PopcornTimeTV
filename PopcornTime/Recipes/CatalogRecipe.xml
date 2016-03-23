@@ -1,0 +1,12 @@
+<stackTemplate>
+    <banner>
+        <title>{{TITLE}}</title>
+    </banner>
+    <collectionList>
+        <grid>
+            <section>
+                {{POSTERS}}
+            </section>
+        </grid>
+    </collectionList>
+</stackTemplate>
