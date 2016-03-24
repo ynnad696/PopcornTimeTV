@@ -5,6 +5,7 @@ A simple and easy to use application based on TVML to bring the native desktop
 PopcornTime experience to Apple TV.
 
 ##Setup
+**We're aware of the issues cloning the project, we're working on fixing this ASAP**
 
 *Open Terminal to run the following commands*
 
