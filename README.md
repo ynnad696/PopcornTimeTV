@@ -12,6 +12,7 @@ PopcornTime experience to Apple TV.
 cd ~/Desktop
 git clone https://github.com/PopcornTimeTV/PopcornTimeTV.git
 cd ~/Desktop/PopcornTimeTV
+pod install
 ```
 
 **Open the project with**
