@@ -10,5 +10,5 @@ target 'PopcornTime' do
   pod 'Kingfisher'
   pod 'TVMLKitchen', :git => 'https://github.com/toshi0383/TVMLKitchen.git', :branch => 'swift2.2'
   pod 'PopcornKit', :git => 'https://github.com/PopcornTimeTV/PopcornKit.git'
-  pod 'PopcornTorrent'
+  pod 'PopcornTorrent', '~> 1.0.4'
 end
