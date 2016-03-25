@@ -12,7 +12,7 @@
         <stack>
             <title>{{TITLE}}</title>
             <row>
-<!--                <text><badge src="resource://tomato-fresh"/> 64%</text>-->
+<!--            <text><badge src="resource://tomato-fresh"/> 64%</text>-->
                 <text>{{RUNTIME}}</text>
                 <text>{{GENRES}}</text>
                 <text>{{YEAR}}</text>
@@ -21,14 +21,14 @@
             </row>
             <description allowsZooming="true" moreLabel="more" actionID="showDescription:{{TITLE}}:{{DESCRIPTION}}">{{DESCRIPTION}}</description>
             <row>
-                <buttonLockup actionID="playMovie:{{MAGNET}}:{{IMAGE}}:{{TITLE}}">
-                    <badge src="resource://button-play" />
-                    <title>Play</title>
-                </buttonLockup>
-                
                 <buttonLockup actionID="playPreview:{{YOUTUBE_PREVIEW_URL}}">
                     <badge src="resource://button-preview" />
                     <title>Trailer</title>
+                </buttonLockup>
+                
+                <buttonLockup actionID="playMovie:{{MAGNET}}:{{IMAGE}}:{{TITLE}}">
+                    <badge src="resource://button-play" />
+                    <title>Play</title>
                 </buttonLockup>
                 
                 <buttonLockup actionID="addWatchlist:{{MOVIE_ID}}">
@@ -44,7 +44,7 @@
     <!-- Suggestions -->
     <shelf>
         <header>
-            <title>More Like This</title>
+            <title>Similar Movies</title>
         </header>
         <section>
             {{SUGGESTIONS}}
