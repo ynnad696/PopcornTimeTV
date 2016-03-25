@@ -1,3 +1,10 @@
+<head>
+    <style>
+        .hover {
+        tv-text-highlight-style: marquee-on-highlight;
+        }
+    </style>
+</head>
 <stackTemplate>
     <banner>
         <title>{{TITLE}}</title>
