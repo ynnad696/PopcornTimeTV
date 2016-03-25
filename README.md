@@ -5,8 +5,13 @@ A simple and easy to use application based on TVML to bring the native desktop
 PopcornTime experience to Apple TV.
 
 ##Setup
-**We're aware of the issues cloning the project, we're working on fixing this ASAP**
 
+PopcornTime requires cocoapods. 
+To install it simply open Terminal and enter the following command
+
+`gem install cocoapods`
+
+Setting up PopcornTime is quite easy.
 *Open Terminal to run the following commands*
 
 ```
