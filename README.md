@@ -18,6 +18,7 @@ Setting up PopcornTime is quite easy.
 cd ~/Desktop
 git clone https://github.com/PopcornTimeTV/PopcornTimeTV.git
 cd ~/Desktop/PopcornTimeTV
+git checkout 0.2.0
 pod install
 ```
 
@@ -33,7 +34,8 @@ PopcornTime.xcworkspace
 
 ##Version
 
-- 0.1 - Initial Commit *(rewrite)*
+- 0.2.0 - Fixes issues with build and minor UI tweaks.
+- 0.1.0 - Initial Commit *(rewrite)*
 
 ##Want to help?
 
