@@ -1,3 +1,8 @@
+<style>
+    .badge {
+        tv-tint-color: rgb(255,255,255);
+    }
+</style>
 <productTemplate>
     <banner>
         <infoList>
