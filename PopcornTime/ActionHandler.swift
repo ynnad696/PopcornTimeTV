@@ -42,14 +42,17 @@ struct ActionHandler {
                 }
             
         case "playMovie":
+            // {{MAGNET}}:https:{{IMAGE}}:http:{{BACKGROUND_IMAGE}}:{{TITLE}}:{{SHORT_DESCRIPTION}}
             let magnet = "magnet:?xt=urn:btih:\(pieces[1])&tr=" + Trackers.map { $0 }.joinWithSeparator("&tr=")
             
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let viewController = storyboard.instantiateViewControllerWithIdentifier("ProgressViewController") as! ProgressViewController
             
             viewController.magnet = magnet
-            viewController.movieName = pieces[4]
             viewController.imageAddress = pieces[3]
+            viewController.backgroundImageAddress = pieces[5]
+            viewController.movieName = pieces[6]
+            viewController.shortDescription = pieces[7]
             
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 Kitchen.appController.navigationController.pushViewController(viewController, animated: true)

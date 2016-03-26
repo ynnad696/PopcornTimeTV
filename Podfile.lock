@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PopcornKit:
-    :commit: 837c73ea13c1cdc40d5438bb932f2255b8b0e333
+    :commit: 03701855e449950c809809666bd4aba90978779d
     :git: https://github.com/PopcornTimeTV/PopcornKit.git
   TVMLKitchen:
     :commit: 65a3589e7bf055d320642b400229126565c05664

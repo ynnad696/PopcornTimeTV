@@ -3,6 +3,12 @@
         <infoList>
             <info>
                 <header>
+                    <title>Directors</title>
+                </header>
+                {{DIRECTORS}}
+            </info>
+            <info>
+                <header>
                     <title>Actors</title>
                 </header>
                 {{ACTORS}}
@@ -12,7 +18,7 @@
         <stack>
             <title>{{TITLE}}</title>
             <row>
-<!--            <text><badge src="resource://tomato-fresh"/> 64%</text>-->
+                <text><badge src="resource://tomato-{{TOMATO_CRITIC_RATING}}"/> {{TOMATO_CRITIC_SCORE}}%</text>
                 <text>{{RUNTIME}}</text>
                 <text>{{GENRES}}</text>
                 <text>{{YEAR}}</text>
@@ -26,7 +32,7 @@
                     <title>Trailer</title>
                 </buttonLockup>
                 
-                <buttonLockup actionID="playMovie:{{MAGNET}}:{{IMAGE}}:{{TITLE}}">
+                <buttonLockup actionID="playMovie:{{MAGNET}}:{{IMAGE}}:{{BACKGROUND_IMAGE}}:{{TITLE}}:{{SHORT_DESCRIPTION}}">
                     <badge src="resource://button-play" />
                     <title>Play</title>
                 </buttonLockup>

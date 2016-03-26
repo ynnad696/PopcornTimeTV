@@ -30,8 +30,12 @@ public struct ProductRecipe : RecipeType {
         return xml
     }
     
-    var actorString: String {
-        return movie.cast.map { "<text>\($0.name.cleaned)</text>" }.joinWithSeparator("")
+    var directorsString: String {
+        return movie.directors.map { "<text>\($0.name.cleaned)</text>" }.joinWithSeparator("")
+    }
+    
+    var actorsString: String {
+        return movie.actors.map { "<text>\($0.name.cleaned)</text>" }.joinWithSeparator("")
     }
     
     var genresString: String {
@@ -63,7 +67,7 @@ public struct ProductRecipe : RecipeType {
     }
     
     var castString: String {
-        let mapped: [String] = movie.cast.map {
+        let mapped: [String] = movie.actors.map {
             let name = $0.name.componentsSeparatedByString(" ")
             var string = "<monogramLockup>" + "\n"
             string += "<monogram firstName=\"\(name.first!)\" lastName=\"\(name.last!)\"/>"
@@ -80,13 +84,24 @@ public struct ProductRecipe : RecipeType {
         if let file = NSBundle.mainBundle().URLForResource("ProductRecipe", withExtension: "xml") {
             do {
                 xml = try String(contentsOfURL: file)
-                xml = xml.stringByReplacingOccurrencesOfString("{{ACTORS}}", withString: actorString)
+                xml = xml.stringByReplacingOccurrencesOfString("{{DIRECTORS}}", withString: directorsString)
+                xml = xml.stringByReplacingOccurrencesOfString("{{ACTORS}}", withString: actorsString)
+                var tomato = movie.tomatoesCriticsRating.lowercaseString
+                if tomato == "none" {
+                    xml = xml.stringByReplacingOccurrencesOfString("<text><badge src=\"resource://tomato-{{TOMATO_CRITIC_RATING}}\"/> {{TOMATO_CRITIC_SCORE}}%</text>", withString: "")
+                } else if tomato == "rotten" {
+                    tomato = "splat"
+                }
+                xml = xml.stringByReplacingOccurrencesOfString("{{TOMATO_CRITIC_RATING}}", withString: tomato)
+                xml = xml.stringByReplacingOccurrencesOfString("{{TOMATO_CRITIC_SCORE}}", withString: String(movie.tomatoesCriticsScore))
                 
                 xml = xml.stringByReplacingOccurrencesOfString("{{RUNTIME}}", withString: runtime)
                 xml = xml.stringByReplacingOccurrencesOfString("{{TITLE}}", withString: movie.title.cleaned)
                 xml = xml.stringByReplacingOccurrencesOfString("{{GENRES}}", withString: genresString)
                 xml = xml.stringByReplacingOccurrencesOfString("{{DESCRIPTION}}", withString: movie.descriptionFull.cleaned)
+                xml = xml.stringByReplacingOccurrencesOfString("{{SHORT_DESCRIPTION}}", withString: movie.summary.cleaned)
                 xml = xml.stringByReplacingOccurrencesOfString("{{IMAGE}}", withString: movie.largeCoverImage)
+                xml = xml.stringByReplacingOccurrencesOfString("{{BACKGROUND_IMAGE}}", withString: movie.backgroundImage)
                 xml = xml.stringByReplacingOccurrencesOfString("{{YEAR}}", withString: String(movie.year))
                 xml = xml.stringByReplacingOccurrencesOfString("{{RATING}}", withString: movie.mpaRating.lowercaseString)
                 

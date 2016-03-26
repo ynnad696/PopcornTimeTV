@@ -14,13 +14,16 @@ import Kingfisher
 
 class ProgressViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
     var magnet: String!
-    var movieName: String!
     var imageAddress: String!
+    var backgroundImageAddress: String!
+    var movieName: String!
+    var shortDescription: String!
     
     var downloading = false
     
@@ -35,7 +38,8 @@ class ProgressViewController: UIViewController {
         
         if let _ = magnet, let _ = movieName, let _ = imageAddress {
             nameLabel.text = "Downloading " + movieName + "..."
-            imageView.kf_setImageWithURL(NSURL(string: "https:" + imageAddress)!)
+            imageView.kf_setImageWithURL(NSURL(string: "http:" + imageAddress)!)
+            backgroundImageView.kf_setImageWithURL(NSURL(string: "http:" + backgroundImageAddress)!)
             
             if downloading {
                 return
@@ -45,9 +49,35 @@ class ProgressViewController: UIViewController {
                 self.downloading = true
                 self.progressView.progress = status.bufferingProgress
             }, readyToPlay: { url in
+                let mediaItem = AVPlayerItem(URL: url)
+                
+                let titleMetadataItem = AVMutableMetadataItem()
+                titleMetadataItem.locale = NSLocale.currentLocale()
+                titleMetadataItem.key = AVMetadataCommonKeyTitle
+                titleMetadataItem.keySpace = AVMetadataKeySpaceCommon
+                titleMetadataItem.value = self.movieName
+                mediaItem.externalMetadata.append(titleMetadataItem)
+                
+                let descriptionMetadataItem = AVMutableMetadataItem()
+                descriptionMetadataItem.locale = NSLocale.currentLocale()
+                descriptionMetadataItem.key = AVMetadataCommonKeyDescription
+                descriptionMetadataItem.keySpace = AVMetadataKeySpaceCommon
+                descriptionMetadataItem.value = self.shortDescription
+                mediaItem.externalMetadata.append(descriptionMetadataItem)
+                
+                if let image = self.imageView.image {
+                    let artworkMetadataItem = AVMutableMetadataItem()
+                    artworkMetadataItem.locale = NSLocale.currentLocale()
+                    artworkMetadataItem.key = AVMetadataCommonKeyArtwork
+                    artworkMetadataItem.keySpace = AVMetadataKeySpaceCommon
+                    artworkMetadataItem.value = UIImagePNGRepresentation(image)
+                    
+                    mediaItem.externalMetadata.append(artworkMetadataItem)
+                }
+                
                 Kitchen.appController.navigationController.popViewControllerAnimated(false)
                 let playerController = ACPlayerViewController()
-                playerController.player = AVPlayer(URL: url)
+                playerController.player = AVPlayer(playerItem: mediaItem)
                 playerController.player?.play()
                 Kitchen.appController.navigationController.pushViewController(playerController, animated: true)
             }) { error in
