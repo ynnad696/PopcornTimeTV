@@ -1,0 +1,49 @@
+PODS:
+  - Alamofire (3.3.0)
+  - Kingfisher (2.2.0)
+  - ObjectMapper (1.2.0)
+  - PopcornKit (0.1):
+    - Alamofire
+    - ObjectMapper
+    - PopcornTorrent
+    - SWXMLHash
+  - PopcornTorrent (1.0.7)
+  - SWXMLHash (2.2.0)
+  - TVMLKitchen (0.6.2)
+  - YoutubeSourceParserKit (0.2.4)
+
+DEPENDENCIES:
+  - Kingfisher
+  - PopcornKit (from `https://github.com/PopcornTimeTV/PopcornKit.git`)
+  - PopcornTorrent
+  - TVMLKitchen (from `https://github.com/toshi0383/TVMLKitchen.git`, branch `swift2.2`)
+  - YoutubeSourceParserKit
+
+EXTERNAL SOURCES:
+  PopcornKit:
+    :git: https://github.com/PopcornTimeTV/PopcornKit.git
+  TVMLKitchen:
+    :branch: swift2.2
+    :git: https://github.com/toshi0383/TVMLKitchen.git
+
+CHECKOUT OPTIONS:
+  PopcornKit:
+    :commit: 837c73ea13c1cdc40d5438bb932f2255b8b0e333
+    :git: https://github.com/PopcornTimeTV/PopcornKit.git
+  TVMLKitchen:
+    :commit: 65a3589e7bf055d320642b400229126565c05664
+    :git: https://github.com/toshi0383/TVMLKitchen.git
+
+SPEC CHECKSUMS:
+  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Kingfisher: 350869ed88d6451803b390475d977abdd9f0a357
+  ObjectMapper: b1e9c7c8a9f6400b72690c80072c131504caa66f
+  PopcornKit: 07037e80c8ab915f50882f98e9d7f586bf6138e7
+  PopcornTorrent: dadc197cfbfd3af624e15c8ab5a9225cd00cf05d
+  SWXMLHash: cf2a62b04514211b238b39b3aa348ba4746523af
+  TVMLKitchen: e1916ec9bca767dae34e509ab59fdf8009d52d8a
+  YoutubeSourceParserKit: d1506222a62718ed41f18ab52ebbc1b1d9ecabcc
+
+PODFILE CHECKSUM: 62ab14006a152d9340b944d830ac4d9ad43f7f09
+
+COCOAPODS: 1.0.0.beta.3
