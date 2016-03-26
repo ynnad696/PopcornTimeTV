@@ -1,4 +1,7 @@
 #PopcornTime TV
+===
+[![Build Status](https://travis-ci.org/PopcornTimeTV/PopcornTimeTV.svg?branch=master)](https://travis-ci.org/PopcornTimeTV/PopcornTimeTV)
+[![Slack Status](https://popcorntimeappletv.herokuapp.com/badge.svg)](https://popcorntimeappletv.herokuapp.com/)
 
 An Apple TV 4 application to torrent movies and tv shows for streaming.
 A simple and easy to use application based on TVML to bring the native desktop
@@ -40,6 +43,4 @@ PopcornTime.xcworkspace
 ##Want to help?
 
 Join the project Slack channel and be part of the PopcornTime experience for AppleTV. Designer? Developer? Curious person? You're welcome! Come in and say hello. Want to report a bug, request a feature or even contribute? You can join our community Slack group to keep up-to-date and speak to the team.
-
-[![Slack Status](https://popcorntimeappletv.herokuapp.com/badge.svg)](https://popcorntimeappletv.herokuapp.com/)
 
