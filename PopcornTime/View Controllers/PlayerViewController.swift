@@ -1,5 +1,5 @@
 //
-//  ACPlayerViewController.swift
+//  PlayerViewController.swift
 //  PopcornTime
 //
 //  Created by Yogi Bear on 3/18/16.
@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import PopcornTorrent
 
-class ACPlayerViewController: AVPlayerViewController {
+class PlayerViewController: AVPlayerViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

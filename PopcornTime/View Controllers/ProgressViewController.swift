@@ -76,7 +76,7 @@ class ProgressViewController: UIViewController {
                 }
 
                 Kitchen.appController.navigationController.popViewControllerAnimated(false)
-                let playerController = ACPlayerViewController()
+                let playerController = PlayerViewController()
                 playerController.player = AVPlayer(playerItem: mediaItem)
                 playerController.player?.play()
                 Kitchen.appController.navigationController.pushViewController(playerController, animated: true)
