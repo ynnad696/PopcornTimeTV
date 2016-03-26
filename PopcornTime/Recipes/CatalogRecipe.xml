@@ -1,7 +1,7 @@
 <head>
     <style>
         .hover {
-        tv-text-highlight-style: marquee-and-show-on-highlight;
+            tv-text-highlight-style: marquee-and-show-on-highlight;
         }
     </style>
 </head>

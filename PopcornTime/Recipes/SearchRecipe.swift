@@ -22,7 +22,7 @@ class YIFYSearchRecipe: SearchRecipe {
                     let torrent = movie.torrents.filter { $0.quality == "720p" }.first!
                     
                     var string = "<lockup actionID=\"showMovie:\(movie.id)\" playActionID=\"playMovie:\(torrent.hash)\">"
-                    string += "<img src=\"\(movie.mediumCoverImage)\" width=\"200\" height=\"301\" />"
+                    string += "<img src=\"\(movie.parallaxPoster)\" width=\"200\" height=\"301\" />"
                     string += "<title>\(movie.title.cleaned)</title>"
                     string += "</lockup>"
                     return string

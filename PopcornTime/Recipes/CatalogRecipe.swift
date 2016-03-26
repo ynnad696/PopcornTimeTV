@@ -36,7 +36,7 @@ public struct CatalogRecipe: RecipeType {
             let torrent = $0.torrents.filter { $0.quality == "720p" }[0]
             
             var string = "<lockup actionID=\"showMovie:\($0.id)\" playActionID=\"playMovie:\(torrent.hash)\">"
-            string += "<img src=\"\($0.mediumCoverImage)\" width=\"250\" height=\"375\" />"
+            string += "<img src=\"\($0.parallaxPoster)\" width=\"250\" height=\"375\" />"
             string += "<title class=\"hover\">\($0.title.cleaned)</title>"
             string += "</lockup>"
             return string

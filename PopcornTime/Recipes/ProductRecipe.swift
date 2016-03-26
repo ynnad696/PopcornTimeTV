@@ -58,7 +58,7 @@ public struct ProductRecipe : RecipeType {
     var suggestionsString: String {
         let mapped: [String] = suggestions.map {
             var string = "<lockup actionID=\"showMovie:\($0.id)\">" + "\n"
-            string += "<img src=\"\($0.mediumCoverImage)\" width=\"150\" height=\"226\" />" + "\n"
+            string += "<img src=\"\($0.parallaxPoster)\" width=\"150\" height=\"226\" />" + "\n"
             string += "<title>\($0.title.cleaned)</title>" + "\n"
             string += "</lockup>" + "\n"
             return string
