@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+
         let manager = NetworkManager.sharedManager()
         manager.fetchServers { servers, error in
             if let servers = servers {
@@ -25,24 +25,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
-        
+
         let cookbook = Cookbook(launchOptions: launchOptions)
         cookbook.evaluateAppJavaScriptInContext = { appController, jsContext in
-            
+
         }
-        
+
         cookbook.actionIDHandler = ActionHandler.primary
         cookbook.playActionIDHandler = ActionHandler.play
-        
+
         Kitchen.prepare(cookbook)
-        
+
         KitchenTabBar.sharedBar.items = [
             Popular(),
             Latest(),
             Search()
         ]
-        
+
         return true
     }
 }
-

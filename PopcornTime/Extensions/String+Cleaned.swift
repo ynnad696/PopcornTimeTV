@@ -8,12 +8,12 @@
 import Foundation
 
 extension String {
-    
+
     var cleaned: String {
         var s = stringByReplacingOccurrencesOfString("&amp;", withString: "&")
         s = s.stringByReplacingOccurrencesOfString("&", withString: "&amp;")
         s = s.stringByReplacingOccurrencesOfString("\"", withString: "&quot;")
         return s
     }
-    
+
 }

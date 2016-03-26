@@ -10,9 +10,9 @@ import TVMLKitchen
 import PopcornKit
 
 struct Latest: TabItem {
-    
+
     let title = "Latest"
-    
+
     func handler() {
         NetworkManager.sharedManager().fetchMovies(limit: 50, page: 1, quality: "1080p", minimumRating: 0, queryTerm: nil, genre: nil, sortBy: "date_added", orderBy: "desc") { movies, error in
             if let movies = movies {
@@ -21,5 +21,5 @@ struct Latest: TabItem {
             }
         }
     }
-    
+
 }

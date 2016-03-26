@@ -9,11 +9,11 @@
 import TVMLKitchen
 
 struct Search: TabItem {
-    
+
     let title = "Search"
-    
+
     func handler() {
         Kitchen.serve(recipe: YIFYSearchRecipe(type: .TabSearch))
     }
-    
+
 }

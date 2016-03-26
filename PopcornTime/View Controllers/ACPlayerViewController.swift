@@ -17,14 +17,14 @@ class ACPlayerViewController: AVPlayerViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
     }
-    
+
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
-        
+
         PTTorrentStreamer.sharedStreamer().cancelStreaming()
     }
 
@@ -32,7 +32,7 @@ class ACPlayerViewController: AVPlayerViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation

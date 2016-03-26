@@ -14,7 +14,6 @@
 		287B853F1C9873A200EEF5C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287B853E1C9873A200EEF5C8 /* Assets.xcassets */; };
 		287B85471C98771300EEF5C8 /* ActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287B85461C98771300EEF5C8 /* ActionHandler.swift */; };
 		28EB626C1CA3364300985F78 /* String+Cleaned.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EB626B1CA3364300985F78 /* String+Cleaned.swift */; };
-		40E5BA551CA6E509002947A2 /* Movie+Parallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E5BA541CA6E509002947A2 /* Movie+Parallax.swift */; };
 		4D6953C8BDE957ED2E9EFD94 /* Pods_PopcornTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C900A4508BB37D7070FA6888 /* Pods_PopcornTime.framework */; };
 		923860571CA0E40500A21F3B /* Latest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923860561CA0E40500A21F3B /* Latest.swift */; };
 		92892D221C9E489000BCD1A1 /* SearchRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92892D201C9E489000BCD1A1 /* SearchRecipe.swift */; };
@@ -22,7 +21,6 @@
 		92925B2F1C9CA4E80086D362 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92925B2D1C9CA4E80086D362 /* Main.storyboard */; };
 		92925B311C9CA5BC0086D362 /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92925B301C9CA5BC0086D362 /* ProgressViewController.swift */; };
 		92925B341C9CAB360086D362 /* ACPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92925B331C9CAB360086D362 /* ACPlayerViewController.swift */; };
-		92925B421C9E16210086D362 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92925B411C9E16210086D362 /* SearchViewController.swift */; };
 		92925B451C9E199B0086D362 /* DescriptionRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92925B431C9E199B0086D362 /* DescriptionRecipe.swift */; };
 		92925B461C9E199B0086D362 /* DescriptionRecipe.xml in Resources */ = {isa = PBXBuildFile; fileRef = 92925B441C9E199B0086D362 /* DescriptionRecipe.xml */; };
 		929B44631C9B73FE00805EC4 /* CatalogRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929B445F1C9B73FE00805EC4 /* CatalogRecipe.swift */; };
@@ -41,14 +39,12 @@
 		287B85401C9873A200EEF5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287B85461C98771300EEF5C8 /* ActionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionHandler.swift; sourceTree = "<group>"; };
 		28EB626B1CA3364300985F78 /* String+Cleaned.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Cleaned.swift"; path = "Extensions/String+Cleaned.swift"; sourceTree = "<group>"; };
-		40E5BA541CA6E509002947A2 /* Movie+Parallax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Movie+Parallax.swift"; path = "Extensions/Movie+Parallax.swift"; sourceTree = "<group>"; };
 		923860561CA0E40500A21F3B /* Latest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Latest.swift; sourceTree = "<group>"; };
 		92892D201C9E489000BCD1A1 /* SearchRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRecipe.swift; sourceTree = "<group>"; };
 		92892D211C9E489000BCD1A1 /* MovieSearchRecipe.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MovieSearchRecipe.xml; sourceTree = "<group>"; };
 		92925B2E1C9CA4E80086D362 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92925B301C9CA5BC0086D362 /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressViewController.swift; path = "View Controllers/ProgressViewController.swift"; sourceTree = "<group>"; };
 		92925B331C9CAB360086D362 /* ACPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ACPlayerViewController.swift; path = "View Controllers/ACPlayerViewController.swift"; sourceTree = "<group>"; };
-		92925B411C9E16210086D362 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "View Controllers/SearchViewController.swift"; sourceTree = "<group>"; };
 		92925B431C9E199B0086D362 /* DescriptionRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionRecipe.swift; sourceTree = "<group>"; };
 		92925B441C9E199B0086D362 /* DescriptionRecipe.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DescriptionRecipe.xml; sourceTree = "<group>"; };
 		929B445F1C9B73FE00805EC4 /* CatalogRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogRecipe.swift; sourceTree = "<group>"; };
@@ -136,7 +132,6 @@
 		28EB626A1CA3362B00985F78 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				40E5BA541CA6E509002947A2 /* Movie+Parallax.swift */,
 				28EB626B1CA3364300985F78 /* String+Cleaned.swift */,
 			);
 			name = Extensions;
@@ -156,7 +151,6 @@
 			children = (
 				92925B301C9CA5BC0086D362 /* ProgressViewController.swift */,
 				92925B331C9CAB360086D362 /* ACPlayerViewController.swift */,
-				92925B411C9E16210086D362 /* SearchViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -219,7 +213,7 @@
 				TargetAttributes = {
 					287B85331C9873A200EEF5C8 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 5DH97P84P2;
+						DevelopmentTeam = HHS94TKB2U;
 					};
 				};
 			};
@@ -316,13 +310,11 @@
 				287B85471C98771300EEF5C8 /* ActionHandler.swift in Sources */,
 				28EB626C1CA3364300985F78 /* String+Cleaned.swift in Sources */,
 				929B44631C9B73FE00805EC4 /* CatalogRecipe.swift in Sources */,
-				92925B421C9E16210086D362 /* SearchViewController.swift in Sources */,
 				92925B311C9CA5BC0086D362 /* ProgressViewController.swift in Sources */,
 				929B44651C9B73FE00805EC4 /* ProductRecipe.swift in Sources */,
 				92925B451C9E199B0086D362 /* DescriptionRecipe.swift in Sources */,
 				923860571CA0E40500A21F3B /* Latest.swift in Sources */,
 				280910341C99E0E000C8EC1C /* Search.swift in Sources */,
-				40E5BA551CA6E509002947A2 /* Movie+Parallax.swift in Sources */,
 				287B85381C9873A200EEF5C8 /* AppDelegate.swift in Sources */,
 				92925B341C9CAB360086D362 /* ACPlayerViewController.swift in Sources */,
 			);
@@ -432,7 +424,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PopcornTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntimetvos.PopcornTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -446,7 +438,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = PopcornTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntimetvos.PopcornTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popcorntime.PopcornTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -9,19 +9,19 @@
 import TVMLKitchen
 import PopcornKit
 
-public struct ProductRecipe : RecipeType {
-    
+public struct ProductRecipe: RecipeType {
+
     let movie: Movie
     let suggestions: [Movie]
-    
+
     public let theme = DefaultTheme()
     public let presentationType = PresentationType.Default
-    
+
     public init(movie: Movie, suggestions: [Movie]) {
         self.movie = movie
         self.suggestions = suggestions
     }
-    
+
     public var xmlString: String {
         var xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>"
         xml += "<document>"
@@ -29,15 +29,15 @@ public struct ProductRecipe : RecipeType {
         xml += "</document>"
         return xml
     }
-    
+
     var directorsString: String {
         return movie.directors.map { "<text>\($0.name.cleaned)</text>" }.joinWithSeparator("")
     }
-    
+
     var actorsString: String {
         return movie.actors.map { "<text>\($0.name.cleaned)</text>" }.joinWithSeparator("")
     }
-    
+
     var genresString: String {
         if movie.genres.count == 2 {
             return "<text>\(movie.genres[0])</text>" + "/" + "<text>\(movie.genres[1])</text>"
@@ -45,16 +45,16 @@ public struct ProductRecipe : RecipeType {
             return "<text>\(movie.genres.first!)</text>"
         }
     }
-    
+
     func secondsToHoursMinutesSeconds(seconds: Int) -> (Int, Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
-    
+
     var runtime: String {
         let (hours, minutes, _) = self.secondsToHoursMinutesSeconds(movie.runtime * 60)
         return "\(hours)h \(minutes)m"
     }
-    
+
     var suggestionsString: String {
         let mapped: [String] = suggestions.map {
             var string = "<lockup actionID=\"showMovie:\($0.id)\">" + "\n"
@@ -65,7 +65,7 @@ public struct ProductRecipe : RecipeType {
         }
         return mapped.joinWithSeparator("\n")
     }
-    
+
     var castString: String {
         let mapped: [String] = movie.actors.map {
             let name = $0.name.componentsSeparatedByString(" ")
@@ -78,7 +78,7 @@ public struct ProductRecipe : RecipeType {
         }
         return mapped.joinWithSeparator("\n")
     }
-    
+
     public var template: String {
         var xml = ""
         if let file = NSBundle.mainBundle().URLForResource("ProductRecipe", withExtension: "xml") {
@@ -94,7 +94,7 @@ public struct ProductRecipe : RecipeType {
                 }
                 xml = xml.stringByReplacingOccurrencesOfString("{{TOMATO_CRITIC_RATING}}", withString: tomato)
                 xml = xml.stringByReplacingOccurrencesOfString("{{TOMATO_CRITIC_SCORE}}", withString: String(movie.tomatoesCriticsScore))
-                
+
                 xml = xml.stringByReplacingOccurrencesOfString("{{RUNTIME}}", withString: runtime)
                 xml = xml.stringByReplacingOccurrencesOfString("{{TITLE}}", withString: movie.title.cleaned)
                 xml = xml.stringByReplacingOccurrencesOfString("{{GENRES}}", withString: genresString)
@@ -104,12 +104,12 @@ public struct ProductRecipe : RecipeType {
                 xml = xml.stringByReplacingOccurrencesOfString("{{BACKGROUND_IMAGE}}", withString: movie.backgroundImage)
                 xml = xml.stringByReplacingOccurrencesOfString("{{YEAR}}", withString: String(movie.year))
                 xml = xml.stringByReplacingOccurrencesOfString("{{RATING}}", withString: movie.mpaRating.lowercaseString)
-                
+
                 xml = xml.stringByReplacingOccurrencesOfString("{{YOUTUBE_PREVIEW_URL}}", withString: movie.youtubeTrailerURL)
                 xml = xml.stringByReplacingOccurrencesOfString("{{MAGNET}}", withString: movie.torrents.first!.hash)
-                
+
                 xml = xml.stringByReplacingOccurrencesOfString("{{SUGGESTIONS}}", withString: suggestionsString)
-                
+
                 xml = xml.stringByReplacingOccurrencesOfString("{{CAST}}", withString: castString)
             } catch {
                 print("Could not open Catalog template")
@@ -117,5 +117,5 @@ public struct ProductRecipe : RecipeType {
         }
         return xml
     }
-    
+
 }
