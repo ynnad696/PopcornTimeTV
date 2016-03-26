@@ -45,7 +45,7 @@ class ProgressViewController: UIViewController {
                 self.downloading = true
                 self.progressView.progress = status.bufferingProgress
             }, readyToPlay: { url in
-                
+                Kitchen.appController.navigationController.popViewControllerAnimated(false)
                 let playerController = ACPlayerViewController()
                 playerController.player = AVPlayer(URL: url)
                 playerController.player?.play()
@@ -58,7 +58,6 @@ class ProgressViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        PTTorrentStreamer.sharedStreamer().cancelStreaming()
     }
 
 

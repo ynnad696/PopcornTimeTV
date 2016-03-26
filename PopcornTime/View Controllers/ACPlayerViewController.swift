@@ -18,16 +18,14 @@ class ACPlayerViewController: AVPlayerViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
-        print(self.presentingViewController)
-        print(self.parentViewController)
-        if let viewController = self.presentingViewController as? ProgressViewController {
-            print("Close out this bitch")
-            PTTorrentStreamer.sharedStreamer().cancelStreaming()
-            viewController.dismissViewControllerAnimated(false, completion: nil)
-        }
+        PTTorrentStreamer.sharedStreamer().cancelStreaming()
     }
 
     override func didReceiveMemoryWarning() {
