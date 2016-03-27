@@ -13,13 +13,15 @@ public struct ProductRecipe: RecipeType {
 
     let movie: Movie
     let suggestions: [Movie]
+    let existsInWatchList: Bool
 
     public let theme = DefaultTheme()
     public let presentationType = PresentationType.Default
 
-    public init(movie: Movie, suggestions: [Movie]) {
+    public init(movie: Movie, suggestions: [Movie], existsInWatchList: Bool) {
         self.movie = movie
         self.suggestions = suggestions
+        self.existsInWatchList = existsInWatchList
     }
 
     public var xmlString: String {
@@ -111,6 +113,14 @@ public struct ProductRecipe: RecipeType {
                 xml = xml.stringByReplacingOccurrencesOfString("{{SUGGESTIONS}}", withString: suggestionsString)
 
                 xml = xml.stringByReplacingOccurrencesOfString("{{CAST}}", withString: castString)
+                
+                if existsInWatchList {
+                    xml = xml.stringByReplacingOccurrencesOfString("{{WATCHLIST_ACTION}}", withString: "remove")
+                } else {
+                    xml = xml.stringByReplacingOccurrencesOfString("{{WATCHLIST_ACTION}}", withString: "add")
+                }
+                xml = xml.stringByReplacingOccurrencesOfString("{{MOVIE_ID}}", withString: String(movie.id))
+                xml = xml.stringByReplacingOccurrencesOfString("{{TYPE}}", withString: "movie")
             } catch {
                 print("Could not open Catalog template")
             }

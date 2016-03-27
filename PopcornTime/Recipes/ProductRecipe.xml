@@ -44,8 +44,8 @@
                     <title>Play</title>
                 </buttonLockup>
                 
-                <buttonLockup actionID="addWatchlist:{{MOVIE_ID}}">
-                    <badge src="resource://button-add" />
+                <buttonLockup actionID="addWatchlist:{{MOVIE_ID}}:{{TITLE}}:{{TYPE}}:{{IMAGE}}">
+                    <badge src="resource://button-{{WATCHLIST_ACTION}}" />
                     <title>Watchlist</title>
                 </buttonLockup>
             </row>

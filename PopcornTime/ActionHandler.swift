@@ -29,8 +29,10 @@ struct ActionHandler {
                     if let movie = movie {
                         NetworkManager.sharedManager().suggestionsForMovie(movieId: Int(pieces.last!)!, completion: { movies, error in
                             if let movies = movies {
-                                let product = ProductRecipe(movie: movie, suggestions: movies)
-                                Kitchen.serve(recipe: product)
+                                WatchlistManager.sharedManager().itemExistsInWatchList(itemId: movie.id, forType: .Movie, completion: { exists in
+                                    let product = ProductRecipe(movie: movie, suggestions: movies, existsInWatchList: exists)
+                                    Kitchen.serve(recipe: product)
+                                })
                             } else if let _ = error {
 
                             }
@@ -69,7 +71,31 @@ struct ActionHandler {
                 }
             })
 
-        case "addWatchlist": break
+        case "addWatchlist":
+            let name = pieces[2]
+            let id = pieces[1]
+            let type = pieces[3]
+            let cover = pieces[4] + ":" + pieces[5]
+            WatchlistManager.sharedManager().itemExistsInWatchList(itemId: Int(id)!, forType: .Movie, completion: { exists in
+                if exists {
+                    WatchlistManager.sharedManager().removeItemFromWatchList(WatchItem(name: name, id: Int(id)!, coverImage: cover, type: type), completion: { removed in
+                        if removed {
+                            Kitchen.serve(recipe: AlertRecipe(title: "Removed", description: "\(name) was removed from your watchlist.", buttons: [AlertButton(title: "Okay", actionID: "")], presentationType: .Modal))
+                        } else {
+                            Kitchen.serve(recipe: AlertRecipe(title: "Not Found", description: "\(name) is not found in your watchlist.", buttons: [AlertButton(title: "Okay", actionID: "")], presentationType: .Modal))
+                        }
+                    })
+                } else {
+                    WatchlistManager.sharedManager().addItemToWatchList(WatchItem(name: name, id: Int(id)!, coverImage: cover, type: type), completion: { added in
+                        if added {
+                            Kitchen.serve(recipe: AlertRecipe(title: "Added", description: "\(name) was added your watchlist.", buttons: [AlertButton(title: "Okay", actionID: "")], presentationType: .Modal))
+                        } else {
+                            Kitchen.serve(recipe: AlertRecipe(title: "Already Added", description: "\(name) is already in your watchlist.", buttons: [AlertButton(title: "Okay", actionID: "")], presentationType: .Modal))
+                        }
+                    })
+                }
+                
+            })
 
         case "showDescription":
             Kitchen.serve(recipe: DescriptionRecipe(title: pieces[1], description: pieces.last!))
