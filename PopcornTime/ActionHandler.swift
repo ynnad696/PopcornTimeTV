@@ -73,7 +73,10 @@ struct ActionHandler {
 
         case "showDescription":
             Kitchen.serve(recipe: DescriptionRecipe(title: pieces[1], description: pieces.last!))
-
+        
+        case "closeUpdateInfo":
+            Kitchen.dismissModal()
+            
         default: break
         }
 
