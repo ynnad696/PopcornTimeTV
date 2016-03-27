@@ -72,7 +72,6 @@ struct ActionHandler {
             })
 
         case "addWatchlist":
-            print(pieces)
             let name = pieces[2]
             let id = pieces[1]
             let type = pieces[3]
@@ -95,9 +94,9 @@ struct ActionHandler {
                         }
                     })
                 }
-                
+
             })
-            
+
         case "closeAlert":
             Kitchen.dismissModal()
 

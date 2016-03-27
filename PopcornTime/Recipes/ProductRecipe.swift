@@ -113,7 +113,7 @@ public struct ProductRecipe: RecipeType {
                 xml = xml.stringByReplacingOccurrencesOfString("{{SUGGESTIONS}}", withString: suggestionsString)
 
                 xml = xml.stringByReplacingOccurrencesOfString("{{CAST}}", withString: castString)
-                
+
                 if existsInWatchList {
                     xml = xml.stringByReplacingOccurrencesOfString("{{WATCHLIST_ACTION}}", withString: "remove")
                 } else {
