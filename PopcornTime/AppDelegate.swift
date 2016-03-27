@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         KitchenTabBar.sharedBar.items = [
             Popular(),
             Latest(),
+            MovieWatchlist(),
             Search()
         ]
 
